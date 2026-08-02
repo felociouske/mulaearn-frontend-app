@@ -94,12 +94,16 @@ export default function HomePage() {
               <Link
                 key={article.slug}
                 href={`/tutorials/${article.slug}`}
-                className="block rounded-lg border border-border-subtle bg-white p-5 hover:border-brand-400 transition-colors"
+                className="group block rounded-lg border border-border-subtle bg-white p-5 hover:border-brand-400 transition-colors"
               >
                 <p className="text-xs font-medium uppercase tracking-wide text-editorial-accent">
                   {article.category}
                 </p>
                 <p className="mt-2 font-semibold text-foreground">{article.title}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-600 group-hover:gap-2 transition-all">
+                  View more
+                  <span aria-hidden="true">→</span>
+                </span>
               </Link>
             ))}
           </div>

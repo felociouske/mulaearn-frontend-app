@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { tutorials } from "@/lib/tutorials-data";
 import { siteConfig } from "@/lib/site-config";
+import TutorialBody from "../TutorialBody";
 
 // Pre-renders one static HTML page per tutorial at build time — this is
 // what makes each guide its own fast, individually indexable URL rather
@@ -61,18 +63,23 @@ export default async function TutorialDetailPage({
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 editorial-prose">
       <ArticleJsonLd title={tutorial.title} summary={tutorial.summary} />
-      <p className="text-xs font-medium uppercase tracking-wide text-editorial-accent">Tutorial</p>
+
+      <Link
+        href="/tutorials"
+        className="group inline-flex items-center gap-1 text-sm font-medium text-brand-600 transition-all hover:gap-2 hover:text-brand-700"
+      >
+        <span aria-hidden="true" className="transition-transform group-hover:-translate-x-0.5">
+          ←
+        </span>
+        Back to all guides
+      </Link>
+
+      <p className="mt-6 text-xs font-medium uppercase tracking-wide text-editorial-accent">Tutorial</p>
       <h1 className="mt-2 text-3xl font-bold text-brand-900">{tutorial.title}</h1>
       <p className="mt-3 text-foreground/70">{tutorial.summary}</p>
 
       <div className="mt-8">
-        {tutorial.body.map((block, index) =>
-          block.startsWith("## ") ? (
-            <h2 key={index}>{block.replace("## ", "")}</h2>
-          ) : (
-            <p key={index}>{block}</p>
-          )
-        )}
+        <TutorialBody blocks={tutorial.body} />
       </div>
     </div>
   );

@@ -19,10 +19,17 @@ export default function TutorialsIndexPage() {
           <Link
             key={tutorial.slug}
             href={`/tutorials/${tutorial.slug}`}
-            className="block rounded-lg border border-border-subtle bg-white p-5 hover:border-brand-400 transition-colors"
+            className="group block rounded-lg border border-border-subtle bg-white p-5 transition-all duration-200 hover:border-brand-400 hover:shadow-md hover:-translate-y-0.5"
           >
-            <p className="font-semibold text-foreground">{tutorial.title}</p>
+            <p className="font-semibold text-foreground transition-colors group-hover:text-brand-700">
+              {tutorial.title}
+            </p>
             <p className="mt-1 text-sm text-foreground/60">{tutorial.summary}</p>
+
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-600 transition-all group-hover:gap-2">
+              Read more
+              <span aria-hidden="true">→</span>
+            </span>
           </Link>
         ))}
       </div>
