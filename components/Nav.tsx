@@ -22,7 +22,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center">
           <Image
-            src="/mulaearn.jpg" // public/logo.png
+            src="/mulaearn.jpg" 
             alt={siteConfig.name}
             width={150}
             height={50}
@@ -127,10 +127,10 @@ export default function Nav() {
               }`}
               style={{ transitionDelay: isMenuOpen ? `${navLinks.length * 60}ms` : "0ms" }}
             >
-              <a href={`${appUrl}/login`} className="flex-1 rounded-md border border-brand-600 px-3 py-2 text-center text-brand-700">
+              <a href="https://wa.me/254750518501?text=Hello%20MulaEarn%2C%20I'd%20like%20to%20join." className="flex-1 rounded-md border border-brand-600 px-3 py-2 text-center text-brand-700">
                 Log in
               </a>
-              <a href={`${appUrl}/register`} className="flex-1 rounded-md bg-brand-600 px-3 py-2 text-center text-white">
+              <a href="https://wa.me/254750518501?text=Hello%20MulaEarn%2C%20I'd%20like%20to%20join." className="flex-1 rounded-md bg-brand-600 px-3 py-2 text-center text-white">
                 Sign up
               </a>
             </li>
