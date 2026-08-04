@@ -5,6 +5,7 @@
 export const siteConfig = {
   name: "MulaEarn",
   domain: "https://mulaearn.co",
+  define: "Home",
   tagline: "Chat foreigners from the UK, USA, Germany and Turkey amongst other foreigners and Earn huge incomes. Engage in Mulaearn tasks and earn addational income.",
   description:
     "MulaEarn lets you earn money online by chatting with foreigners, taking surveys, watching videos, and more, with fast, transparent withdrawals to M-Pesa and other local payment methods.",
