@@ -47,14 +47,22 @@ export default function Nav() {
             different project/domain entirely) — NOT Next.js <Link>
             client-side navigation, since that only works within this app. */}
         <div className="hidden md:flex items-center gap-3">
-          <a href={`${appUrl}/login`} className="text-sm font-medium text-brand-700 hover:text-brand-600">
-            Log in
-          </a>
           <a
-            href={`${appUrl}/register`}
+            href="https://wa.me/254750518501?text=Hello%20MulaEarn%2C%20I'd%20like%20to%20learn%20more."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-brand-700 hover:text-brand-600"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://wa.me/254750518501?text=Hello%20MulaEarn%2C%20I'd%20like%20to%20join."
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-brand-700 hover:scale-105"
           >
-            Sign up
+            Chat on WhatsApp
           </a>
         </div>
 

@@ -21,12 +21,6 @@ export default function Footer() {
         <div>
           <p className="text-lg font-bold text-white">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-brand-200">{siteConfig.tagline}</p>
-          <a
-            href="mailto:hello@example.com"
-            className="mt-2 inline-block text-sm text-brand-200 hover:text-white transition-colors"
-          >
-            hello@example.com
-          </a>
         </div>
 
         <div className="flex items-center gap-4">
