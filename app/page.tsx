@@ -50,7 +50,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/254750518501?text=Hello%20MulaEarn%2C%20I'd%20like%20to%20join."
+              href={`${appUrl}/register`}
               className="rounded-md bg-brand-600 px-6 py-3 text-base font-semibold text-white hover:bg-brand-700 transition-colors"
             >
               Sign up free
